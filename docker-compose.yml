@@ -1,0 +1,18 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: creditcard-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "ChangeThis_Strong!123"
+    ports: ["1433:1433"]
+    volumes: ["sql_data:/var/opt/mssql"]
+  redis:
+    image: redis:7-alpine
+    container_name: creditcard-redis
+    ports: ["6379:6379"]
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: ["redis_data:/data"]
+volumes:
+  sql_data:
+  redis_data:

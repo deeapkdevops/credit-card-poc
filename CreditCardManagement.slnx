@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/CreditCardManagement.Domain/CreditCardManagement.Domain.csproj" />
+  <Project Path="src/CreditCardManagement.Application/CreditCardManagement.Application.csproj" />
+  <Project Path="src/CreditCardManagement.Infrastructure/CreditCardManagement.Infrastructure.csproj" />
+  <Project Path="src/CreditCardManagement.API/CreditCardManagement.API.csproj" />
+</Solution>
